@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <nav><h1 style="background: #ff4456"> <img src="cal.jpg" alt="logo"> CALCULATOR
+        <div class="c">
+            <a href="homepage.html">HOME</a> |
+            <a href="calculator.html">CALCULATOR</a></div>
+        </h1></nav>
+        <center>
+            <script>
+            function dis(val){
+                document.getElementById("edu").value+=val;
+            }
+            function solve(){
+                let x = document.getElementById("edu").value;
+                let y = eval(x)
+                document.getElementById("edu").value = y;
+            }
+                function clr(){
+                document.getElementById("edu").value = "";
+            }
+            function myfunction(){
+                alert("Your feedback uploaded successfully!!!");
+
+            }
+            function mouseOver() {
+                document.getElementById("demo").style.color = "red";
+            }
+            function bigImg(x) {
+                x.style.height = "50px";
+                x.style.width = "100px";
+            }
+          
+            function normalImg(x) {
+                x.style.height = "40px";
+                x.style.width = "90px";
+            }
+            </script>
+            <div class= tit>
+                <div class = title >Simple Calculator</div>
+                <div class="grid-container">
+                    <table>
+                        <tr>
+                            <td colspan="6"><input class="b" type="text" id="edu"/></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="%" onclick="dis('%')" /> </td>
+                            <td><input type="button" value="(" onclick="dis('(')" /> </td>
+                            <td><input type="button" value=")" onclick="dis(')')" /> </td>
+                            <td><input type="button" value="C" onclick="clr()"  onmouseover="bigImg(this)" onmouseout="normalImg(this) "/> </td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value=">" onclick="dis('>')" /> </td>
+                            <td><input type="button" value="<" onclick="dis('<')" /> </td>
+                            <td><input type="button" value="&" onclick="dis('&')" /> </td>
+                            <td><input type="button" value="|" onclick="dis('|')" /> </td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="+" onclick="dis('+')"/> </td>
+                            <td><input type="button" value="1" onclick="dis('1')"/> </td>
+                            <td><input type="button" value="2" onclick="dis('2')"/> </td>
+                            <td><input type="button" value="3" onclick="dis('3')"/> </td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="-" onclick="dis('-')"/> </td>
+                            <td><input type="button" value="4" onclick="dis('4')" /> </td>
+                            <td><input type="button" value="5" onclick="dis('5')"/> </td>
+                            <td><input type="button" value="6" onclick="dis('6')"/> </td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="*" onclick="dis('*')" /> </td>
+                            <td><input type="button" value="7" onclick="dis('7')" /> </td>
+                            <td><input type="button" value="8" onclick="dis('8')" /> </td>
+                            <td><input type="button" value="9" onclick="dis('9') "/> </td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="/" onclick="dis('/')" /> </td>
+                            <td><input type="button" value="." onclick="dis('.')" /> </td>
+                            <td><input type="button" value="0" onclick="dis('0')" /> </td>
+                            <td><input type="button" value="=" onclick="solve()"  /> </td>
+                        </tr>
+                    </table></div>
+                </center>
+                <div class=abc>
+                    <h3 style="color:white">
+                        <script>document.write("This is your \"feedback\" form");</script></h3>
+                        <select id="mySelect" onchange="Func()">
+                            <option value="Good">Good</option>
+                            <option value="Better">Better</option>
+                            <option value="Best">Best</option>
+                            <option value="Worst">Worst</option>
+                        </select>
+                        <input type="button" value="Submit" onclick="myfunction()"/></div>
+                    </div>
+                    <div class="footer">
+                        <h2>Email</h2>
+                        <p>abc@gmail.com</p>
+                    </div>
+                </body>
+                </html>
